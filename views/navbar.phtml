@@ -1,0 +1,79 @@
+<nav class="d-flex navbar navbar-expand-lg navbar-dark w-100 text-warning bg-dark fixed-top">
+    <a href="/" class="navbar-brand text-danger border rounded-circle border-warning p-1">PW</a>
+    <!-- <a href="/" class="navbar-brand"><p>Peter's</p>World</a> -->
+
+    <button class="navbar-toggler bg-dark text-warning text-center" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse bg-dark text-warning text-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto text-warning d-flex nav-list">
+
+            <li class="nav-item active mr-5 navTime border rounded border-danger">
+                <span class="p-1 t-text active text-warning text-sm" id="time">
+                </span>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link text-warning" href="/">home <span class="sr-only"></span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link text-warning" href="/blog">Blog <span class="sr-only"></span></a>
+            </li>
+
+            <?php if ($params['isAuthorized']) : ?>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-warning" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Peter's Portfolio
+                    </a>
+                    <div class="dropdown-menu bg-dark text-warning" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item text-warning" href="/peter">Peter</a>
+                        <a class="dropdown-item text-warning" href="/projekte">Projekte</a>
+                        <a class="dropdown-item text-warning" href="/bootcamp">Bootcamp</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-warning" href="/unterlagen">Unterlagen</a>
+                        <a class="dropdown-item text-warning" href="/unterlagen">Kontakt</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-warning" href="#">Lebensweg</a>
+                    </div>
+                </li>
+            <?php endif; ?>
+
+            <li class="nav-item active">
+                <a class="nav-link text-warning" href="/kids-zone">Kids-Zone <span class="sr-only"></span></a>
+            </li>
+
+            <?php if ($params['isAuthorized']) : ?>
+                <li class="nav-item active">
+                    <a class="nav-link text-warning mr-5" href="/schwesterEdit">Schwester Edit</a>
+                </li>
+            <?php endif; ?>
+        </ul>
+    </div>
+    <div class="collapse ml-auto navbar-collapse bg-dark text-warning" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-warning d-flex nav-list">
+            <li class=" active nav-right btn-group navButton justify-content-end">
+                <form class="form-inline my-2 my-lg-0" action="/login" method="post">
+                    <?php if ($params['isAuthorized'] === false) : ?>
+                        <a href="login" class="btn btn-sm btn-outline-success m-1">einloggen</a>
+                    <?php endif; ?>
+                </form>
+
+                <form class="form-inline ml-5 my-2 my-lg-0 pull-right" action="/logout" method="POST">
+                    <?php if ($params['isAuthorized']) : ?>
+                        <button type="submit" class="btn btn-sm btn-outline-danger m-1 my-2">ausloggen</button>
+                    <?php endif; ?>
+                </form>
+
+                <form class="form-inline my-2 my-lg-0" action="/register" method="POST">
+                    <?php if ($params['isAuthorized'] === false) : ?>
+                        <!-- <button type="submit" class="btn btn-sm btn-outline-primary m-1">registrieren</button> -->
+                        <a href="register" class="btn btn-sm btn-outline-primary">registrieren</a>
+                    <?php endif; ?>
+                </form>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- <script>alert("Hi")</script> -->

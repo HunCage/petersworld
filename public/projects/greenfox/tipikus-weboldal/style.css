@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.back {
+    position: relative;
+}
+
+i {
+    margin: 25px 25px;
+    color: black;
+    font-size: 24px;
+}
+
+i:hover {
+    color: green;
+    transform: scale(1.1);
+}
+
+a {
+    padding: 3px;
+}
+
+nav {
+    display: flex;
+    width: 100vw;
+    height: 50px;
+    background: purple;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+ul:first-child {
+    margin: 10px;
+}
+
+.item {
+    margin-right: 20px;
+    list-style-type: none;
+    background: cyan;
+    height: 30px;
+    width: 100px;
+}
+
+.item.middle {
+    width: 150px;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+}
+
+.yellow {
+    z-index: 100;
+    flex-grow: 4;
+    background: yellow;
+}
+
+.green {
+    flex-grow: 1;
+    background: lime;
+}

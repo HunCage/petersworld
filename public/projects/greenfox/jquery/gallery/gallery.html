@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gallery App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="back">
+        <a href="/"><i class="fas fa-arrow-alt-circle-left"> back</i></a>
+    </header>
+
+
+    <main class="wrapper">
+        <section class="container">
+            <img src="img/arrow.svg" class="arrow" id="arrow-left" alt="previous">
+            <section class="txtContainer">
+                <img src="" class="image" id="photo" data-num="">
+                <h1 id="photo-title"></h1>
+                <p id="photo-description"></p>
+            </section>
+            <img src="img/arrow.svg" class="arrow" id="arrow-right" alt="next">
+
+            <!-- <figure>
+                <img src="img/img1.jpg" class="image" id="photo" alt="Montain and Lake">
+                <figcaption>
+                    <h1 id="photo-title">Lorem ipsum</h1>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga corrupti porro laboriosam at libero, dignissimos facere animi architecto doloremque natus ea.
+                </figcaption>
+            </figure> -->
+
+        </section>
+
+        <section class="thumbnails">
+            <div id="thumbs">
+                <!-- <div class="thum" id="thumb" data-num="">
+
+                        <img src="img/img1.jpg" class="thmbs" id="thumb1" data-index="1">
+                        <img src="img/img2.jpg" class="thmbs" id="thumb2" data-index="2">
+                        <img src="img/img3.jpg" class="thmbs" id="thumb3" data-index="3">
+                        <img src="img/img4.jpg" class="thmbs" id="thumb4" data-index="4">
+                        <img src="img/img5.jpg" class="thmbs" id="thumb5" data-index="5">
+                        <img src="img/img6.jpg" class="thmbs" id="thumb6" data-index="6">
+                        <img src="img/img7.jpg" class="thmbs" id="thumb7" data-index="7"> 
+
+                </div> -->
+
+                <!-- <div id="thumb" data-num="0"></div>
+
+
+                <div id="thumb" data-num="1"></div>
+
+                <div id="thumb" data-num="2"></div>
+
+                <div id="thumb" data-num="3"></div>
+
+                <div id="thumb" data-num="4"></div>
+
+                <div id="thumb" data-num="5"></div>
+                <div id="thumb" data-num="6"></div>
+                <div id="thumb" data-num="7"></div> -->
+            </div>
+        </section>
+    </main>
+
+    <script src="gallery.js"></script>
+</body>
+
+</html>

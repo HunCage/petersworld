@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Peter Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="description" content="portfolio" />
+    <meta name="keywords" content="back-end, front-end, full-stack, webdesign" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Peter Horvath">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
+
+<body onload="startTime()">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-nav">
+            <ul class="nav-list">
+                <li class="nav-item active"><a class="nav-link active" href="#home"><i class="fas fa-home" aria-hidden="true"></i> Home </a></li>
+                <li class="nav-item"><a class="nav-link" href="#about-me"><i class="far fa-user" aria-hidden="true"></i> About Me </a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects"><i class="fa fa-tasks" aria-hidden="true"></i> Projects </a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html" target="_blank"><i class="fa fa-address-card" aria-hidden="true"></i> Contact/Docs </a></li>
+                <li class="t-text">
+                    <p id="time"></p>
+                    <p id="date"></p>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- welcome Section -->
+    <div class="welcome-section" id="home">
+        <h1 class="welcsec"><strong>Willkommen, an meine Webseite</strong></h1>
+        <p class="welcsec para">Ich bin Peter Web-Designer/Web-Developer</p>
+        <img src="img/ich.jpg" class="img" alt="ich">
+    </div>
+
+    <div class="wrap">
+
+        <!-- Sideboard -->
+        <div class="side" id="about-me">
+            <button type="button" class="btntxt button btnx" onclick="noText()">Mehr info</button>
+            <div id="text">
+                <p>
+                    <strong>Mein Name ist Peter und ich suche neue Herasuforderungen als Quereinsteger in IT-Bereich/Web-Developer.</strong>
+                    <hr>
+                    <br class="ti">Bis Anfang 2020 war ich in Baubranche in der letzen Zeit als Vorarbeiter und auch Baustellenleiter tätig. Wegen meine plötzlich veränderte Gesundheitsstand brauche ich nach neue Tätigkeit zu schauen und dann möchte ich
+                    dass mit meiner kindheitliche Hobby und Leidenschaft kombinieren.<br>
+                    <br> Im Jahr 2019 habe ich die schlechte gesundheitliche wirkung von meine bisherige Arbeit gemerkt und dann habe ich neben der Arbeit und in meiner Freizeit das Web-Desingner/Web-Developer Geheimnisse Studieren an.<br> Das bedutet
+                    ich habe Onlinekurse bei SoloLearn, CodeCademy und bei FreeCodeCamp(teilweise) auch fertig gemacht und erstellte auch einige kleine Projekte.<br>
+                </p>
+                <br>
+                <a href="login.html" target="_blank">Lebenslauf/Kontakt</a>
+            </div>
+        </div>
+
+
+        <!-- Skill Section -->
+        <table>
+            <tr>
+                <th colspan="2">My Skills</th>
+            </tr>
+
+            <tr>
+                <td><i class="fab fa-html5 fa-2x tico"></i>HTML</td>
+                <td><progress max="100" value="80"></progress></td>
+            </tr>
+
+            <tr>
+                <td><i class="fab fa-css3 fa-2x tico"></i>CSS</td>
+                <td><progress max="100" value="65"></progress></td>
+            </tr>
+
+            <tr>
+                <td><i class="fab fa-bootstrap fa-2x tico"></i>Bootstrap</td>
+                <td><progress max="100" value="40"></progress></td>
+            </tr>
+
+            <tr>
+                <td><i class="fab fa-js-square fa-2x tico"></i>JavaScript</td>
+                <td><progress max="100" value="40"></progress></td>
+            </tr>
+
+            <tr>
+                <td><i class="fas fa-code fa-2x tico"></i>Jquery</td>
+                <td><progress max="100" value="20"></progress></td>
+            </tr>
+
+            <tr>
+                <td><i class="fas fa-gamepad fa-2x tico"></i>PhaserJs</td>
+                <td><progress max="100" value="20"></progress></td>
+            </tr>
+
+            <tr>
+                <td><i class="fab fa-php fa-2x tico"></i>PHP</td>
+                <td><progress max="100" value="10"></progress></td>
+            </tr>
+
+        </table>
+
+        <table>
+            <tr>
+                <th colspan="2">My Skills</th>
+            </tr>
+
+            <tr>
+                <td><i class="fab fa-react fa-2x tico"></i>React</td>
+                <td><progress max="100" value="20"></progress></td>
+            </tr>
+
+            <tr>
+                <td><i class="fab fa-vuejs fa-2x tico"></i>Vue</td>
+                <td><progress max="100" value="15"></progress></td>
+            </tr>
+
+            <tr>
+                <td><i class="fab fa-angular fa-2x tico"></i>Angular</td>
+                <td><progress max="100" value="10"></progress></td>
+            </tr>
+
+            <tr>
+                <td><i class="fas fa-database fa-2x tico"></i>Database</td>
+                <td><progress max="100" value="40"></progress></td>
+            </tr>
+
+            <tr>
+                <td><i class="fab fa-git-square fa-2x tico"></i>GitHub</td>
+                <td><progress max="100" value="35"></progress></td>
+            </tr>
+
+            <tr>
+                <td><i class="fas fa-photo-video fa-2x tico"></i>Photoshop</td>
+                <td><progress max="100" value="40"></progress></td>
+            </tr>
+
+            <tr>
+                <td><i class="far fa-newspaper fa-2x tico"></i>QuarkXpress</td>
+                <td><progress max="100" value="45"></progress></td>
+            </tr>
+
+        </table>
+
+        <!-- Project tiles -->
+        <div class="wrapper">
+            <h2 class="projects">Projekten</h2>
+
+            <div class="container">
+                <div class="row cards" id="projects">
+
+                    <div class="grid-item card">
+                        <div class="card text-center">
+                            <img src="img\guess.jpg" class="card-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Guess a Number</h5>
+                                <p class="card-text">
+                                    Ich dachte auf ein Nummer...
+                                </p>
+                                <a href="projects\guessanumber\guess.html" class="button btnx" target="_blank">ausprobieren</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item card">
+                        <div class="card text-center">
+                            <img src="img\barcode.jpg" class="card-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Barcode generator</h5>
+                                <p class="card-text">
+                                    Eigene Barcode erstellen...
+                                </p>
+                                <a href="\projects\barcode_generator\index.html" class="button btnx" target="_blank">ausprobieren</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item card">
+                        <div class="card text-center">
+                            <img src="img\calc.jpg" class="card-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Rechner</h5>
+                                <p class="card-text">
+                                    Einfaches Rechner...
+                                </p>
+                                <a href="projects\Calculator\index.html" class="button btnx" target="_blank">ausprobieren</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item card">
+                        <div class="card text-center">
+                            <img src="img\gallery.jpg" class="card-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Photo Gallery</h5>
+                                <p class="card-text">
+                                    Bilder zu betrachten...
+                                </p>
+                                <a href="projects\image_slider\index.html" class="button btnx" target="_blank">ausprobieren</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item card">
+                        <div class="card text-center">
+                            <img src="img\imgallery.jpg" class="card-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Image Gallery</h5>
+                                <p class="card-text">
+                                    Photogallerie...
+                                </p>
+                                <a href="projects\simple_image_gallery\index.html" class="button btnx" target="_blank">ausprobieren</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item card">
+                        <div class="card text-center">
+                            <img src="img\todo.jpg" class="card-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">To Do App</h5>
+                                <p class="card-text">
+                                    Todo app...
+                                </p>
+                                <a href="projects\todo_app_draggable\index.html" class="button btnx" target="_blank">ausprobieren</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item card">
+                        <div class="card text-center">
+                            <img src="img\galaxy.jpg" class="card-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Our Galaxy</h5>
+                                <p class="card-text">
+                                    Webseite mit Image map aus unseres Sonnensysteme...
+                                </p>
+                                <a href="projects\galaxy\imgmap.html" class="button btnx" target="_blank">ausprobieren</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item card">
+                        <div class="card text-center">
+                            <img src="img\qr.jpg" class="card-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">QR Code Generator</h5>
+                                <p class="card-text">
+                                    Eigenen QR Code erstellen...
+                                </p>
+                                <a href="projects\qr_code_generator\index.html" class="button btnx" target="_blank">ausprobieren</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item card">
+                        <div class="card text-center">
+                            <img src="img\wechsler.jpg" class="card-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Devisen Kurs Wechsler</h5>
+                                <p class="card-text">
+                                    Devisen umrechner...
+                                </p>
+                                <a href="projects\wechsler\index.html" class="button btnx" target="_blank">ausprobieren</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item card">
+                        <div class="card text-center">
+                            <img src="img\snake.jpg" class="card-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Snake Spiel</h5>
+                                <p class="card-text">
+                                    Altes Spiel in Nokia Art.<br> Mit den Kursortasten bewegen<br> Sie sich die Schlange...
+                                </p>
+                                <a href="projects\snake\index.html" class="button btnx" target="_blank">ausprobieren</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="arrow">
+        <a href="#" title="Back to Top"><span class="fas fa-angle-up"></span></a>
+    </div>
+
+    <script src="js/main.js" async defer></script>
+</body>
+
+</html>

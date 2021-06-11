@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.9);
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    transition: all 100ms linear;
+}
+
+.gallery {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 100vh;
+}
+
+.gallery .box {
+    width: 50%;
+    height: 25%;
+    float: left;
+    overflow: hidden;
+}
+
+.gallery .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

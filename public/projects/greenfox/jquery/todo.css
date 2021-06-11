@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+.back {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+i {
+    color: black;
+    font-size: 24px;
+}
+
+i:hover {
+    color: green;
+    transform: scale(1.1);
+}
+
+a {
+    padding: 3px;
+}
+
+
+body {
+    /* position: absolute; */
+    max-width: 100vw;
+    min-width: 38rem;
+    background: rgb(65, 107, 1);
+}
+
+main {
+    border-radius: .7rem 50% .7rem .7rem;
+}
+
+main,
+.todoList {
+    position: relative;
+    top: 70px;
+    min-width: 38rem;
+    width: 38rem;
+    margin: 2rem auto;
+    border: .125rem solid rgb(2, 170, 2);
+    background: rgb(145, 216, 40);
+    box-shadow: .5rem .5rem 1rem rgb(0, 85, 0);
+}
+
+h1 {
+    position: relative;
+    top: -3rem;
+    left: -26rem;
+    transform: skew(8deg, 10deg);
+    text-shadow: .25rem .25rem .2rem chocolate;
+    font-size: 3rem;
+    font-family: 'Comic sans MS';
+    text-align: right;
+}
+
+.wrapper,
+.todoList {
+    width: 30rem;
+    min-width: 30rem;
+    margin: 0 auto 2rem;
+}
+
+#inpTxt {
+    width: 80%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: .5rem .8rem;
+    border-radius: .3125rem 0 0 .3125rem;
+    box-shadow: .175rem .175rem .35rem rgb(0, 85, 0), inset .2rem .2rem .5rem rgb(0, 85, 0);
+    border: none;
+}
+
+input:focus {
+    outline: none;
+    color: chocolate;
+}
+
+#addBtn:hover {
+    background: rgb(175, 92, 32);
+    color: yellowgreen;
+    transform: scale3d(.999);
+    outline: none;
+    border: none
+}
+
+#addBtn::before {
+    border-radius: 0 .3125rem .3125rem 0;
+}
+
+#addBtn {
+    width: 20%;
+    padding: .5rem .4rem;
+    margin-left: -.4rem;
+    font-size: 1.4rem;
+    background: chocolate;
+    box-shadow: .2rem .2rem .5rem chocolate;
+    border-radius: 0 .3125rem .3125rem 0;
+    cursor: pointer;
+}
+
+.todoList {
+    min-height: 4rem;
+    min-width: 38rem;
+    margin: 0 auto;
+    border-radius: .8rem;
+}
+
+.list {
+    max-width: 9.375rem;
+    min-width: 9.375rem;
+    margin: 2rem 1.5rem;
+}
+
+.item {
+    width: 20em;
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+hr {
+    width: 100%;
+}
+
+.fa-check:hover {
+    background: darkgreen;
+    color: yellowgreen;
+    transform: scale(.9);
+}
+
+.fa-trash-alt:hover {
+    background: red;
+    color: yellowgreen;
+    transform: scale(.9);
+}
+
+.fa-check,
+.fa-trash-alt {
+    font-size: 1.5rem;
+    position: sticky;
+    float: right;
+    padding: .3rem;
+    cursor: pointer;
+    right: 0;
+    border: .0625rem solid;
+    border-radius: .35rem;
+    margin-bottom: .6rem;
+}
+
+.fa-trash-alt {
+    color: red;
+    margin-right: .5rem;
+}
+
+.fa-check {
+    color: darkgreen;
+}
+
+li.through {
+    text-decoration: line-through;
+}

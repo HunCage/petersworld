@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="description" content="portfolio" />
+    <meta name="keywords" content="lebenslauf, webdesign" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Peter Horvath">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../public/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../public/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../public/css/all.css" rel="stylesheet">
+    <link href="../public/css/fontawesome.css" rel="stylesheet">
+    <link href="../public/css/brands.css" rel="stylesheet">
+    <link href="../public/css/solid.css" rel="stylesheet">
+    <link href="../public/favicon.ico" rel="icon" type="image/x-icon" />
+    <title>Peter's World</title>
+</head>
+
+<!-- <body onload="startTime()" class="min-vh-50"> -->
+<body class="bg-secondary">
+
+    <?php require_once './views/navbar.phtml' ?>
+
+    <?= $params['content'] ?>
+
+    <?php require_once './views/footer.phtml' ?>
+
+    <script src="../public/js/jquery.slim.min.js"></script>
+    <script src="../public/js/bootstrap.bundle.js"></script>
+    <script src="../public/js/main.js"></script>
+    <!-- <script src="../public/js/validation.js"></script> -->
+</body>
+</html>

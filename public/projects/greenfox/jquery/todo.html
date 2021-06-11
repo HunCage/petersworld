@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Simple Todo list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+    <header class="back">
+        <a href="/"><i class="fas fa-arrow-alt-circle-left"> back</i></a>
+    </header>
+
+    <main>
+        <h1>Todos</h1>
+        <section class="wrapper">
+            <input type="text" id="inpTxt" placeholder="Enter a Task...">
+            <button id="addBtn">add</button>
+        </section>
+    </main>
+    <section class="todoList">
+        <article>
+
+            <ul class="list">
+                <!-- <li>Buy milk<i class="i fas fa-check"></i><i class="i fas fa-trash-alt"></i></li> -->
+            </ul>
+        </article>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous">
+    </script>
+    <script>
+        $('#addBtn').click(() => {
+            let value = $('#inpTxt').val();
+            if (value.length == 0) {
+                alert('Please enter a task');
+            } else {
+                $('ul').append(`<li class="item">${value}<i class="i checkBtn fas fa-check"></i><i class="i delBtn fas fa-trash-alt"></i><hr /></li>`);
+                $('#inpTxt').val('');
+            }
+        });
+
+        $('.todoList').on('click', '.delBtn', (e) => {
+            console.log(e.target);
+            $(e.target).parent().remove();
+        });
+
+        $('.todoList').on('click', '.checkBtn', (e) => {
+            console.log(event.target);
+            $(e.target).parent().toggleClass('through');
+        });
+
+        $('.todoList').on('click', '.item', (e) => {
+            console.log(event.target);
+            $(e.target).toggleClass('through');
+        });
+
+        /* LocalStorage */
+    </script>
+
+</body>
+
+</html>

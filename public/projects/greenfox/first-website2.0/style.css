@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;1,300;1,400;1,700;1,900&display=swap');
+
+/*
+font-family: 'Abril Fatface', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Merriweather', serif;
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1500px;
+    height: 100%;
+}
+
+.back {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+i {
+    z-index: 9999;
+    color: white;
+    font-size: 24px;
+}
+
+i:hover {
+    color: yellow;
+    transform: scale(1.1);
+}
+
+a {
+    padding: 3px;
+    color: ivory;
+}
+
+main {
+    background: yellow;
+    position: relative;
+}
+
+nav {
+    z-index: 1;
+    position: fixed;
+    height: 155px;
+    width: 100%;
+    background: #222;
+}
+
+nav ul {
+    list-style: none;
+    padding: 30px;
+}
+
+nav ul li {
+    font-size: 62px;
+    font-weight: 400;
+    display: inline;
+}
+
+li a {
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: yellow;
+    text-shadow: orange 2px 2px 2px;
+}
+
+.wrapper {
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.header {
+    width: 45%;
+    margin-bottom: -240px;
+}
+
+.image {
+    margin-top: 145px;
+    background-image: url("https://raw.githubusercontent.com/green-fox-academy/myfirstapp-syllabus/master/assets/first-website-header.png");
+    background-size: cover;
+    background-position: center;
+    height: 810px;
+}
+
+.name {
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 300;
+    color: #222;
+    position: relative;
+    bottom: 450px;
+    left: 150px;
+    line-height: 1.05;
+}
+
+.hi {
+    position: relative;
+    font-size: 62px;
+    bottom: -4px;
+}
+
+h1 {
+    font-size: 130px;
+    text-shadow: orange 2px 2px 2px;
+}
+
+.first {
+    margin-top: 200px;
+    width: 55%;
+    margin-bottom: -280px;
+}
+
+.col {
+    margin-top: 48px;
+}
+
+.right {
+    width: 55%;
+    flex-grow: 1;
+}
+
+.jumbo-box {
+    flex-grow: 1;
+    height: 100%;
+    width: 44%;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.jumbo::before {
+    position: absolute;
+    font-size: 300px;
+    left: -2px;
+    top: -218px;
+    content: '”';
+    transform: rotateZ(-180deg);
+}
+
+.jumbo {
+    width: 100%;
+    position: relative;
+    text-align: left;
+    font-weight: 500;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 95px;
+    background-color: rgb(58, 58, 58);
+    text-shadow: orange 2px 2px 2px;
+    color: yellow;
+    padding: 110px 120px 100px;
+}
+
+.para p {
+    letter-spacing: -2px;
+    margin-left: 40px;
+}
+
+.para,
+.para li {
+    font-size: 36px;
+    letter-spacing: -1px;
+    margin-left: 40px;
+}
+
+.para-margin {
+    margin-top: 40px;
+    margin-left: 60px;
+}
+
+li {
+    list-style-type: square;
+}
+
+h3 {
+    margin: 90px 35px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: thick;
+    font-size: 44px;
+    text-transform: uppercase;
+}
+
+h4 {
+    letter-spacing: -1px;
+    margin: 0 35px;
+    line-height: 1.4;
+    font-size: 40px;
+    margin-top: 35px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h5 {
+    letter-spacing: -1px;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-size: 32px;
+    margin-left: 35px;
+    margin-bottom: 35px;
+}
+
+ul {
+    margin-left: 55px;
+}
+
+p,
+li {
+    color: #222;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 32px;
+    line-height: 1.5;
+    letter-spacing: -2px;
+    margin-left: 35px;
+}
+
+
+/*
+p {
+margin-top: 35px;
+}
+
+hr {
+height: 5px;
+background-color: black;
+}
+
+.last {
+margin-bottom: 50px;
+} */
+
+
+/* 
+.wrap {
+height: 1300px;
+display: flex;
+width: 70%;
+justify-content: center;
+flex-direction: column;
+margin: 0 auto;
+}
+
+nav {
+width: 100%;
+height: 160px;
+background: aqua;
+}
+
+main {
+display: flex;
+flex-direction: row;
+height: 980px;
+}
+
+.orange {
+flex-grow: 2;
+background: orange;
+}
+
+.red {
+position: relative;
+flex-grow: 6;
+background: red;
+margin: 0 40px;
+}
+
+article {
+display: flex;
+background: black;
+position: absolute;
+width: 100px;
+height: 100px;
+right: 40px;
+bottom: 40px;
+}
+
+.purple {
+flex-grow: 2;
+background: purple;
+}
+
+footer {
+width: 100%;
+height: 160px;
+background: blue;
+} */
+
+
+/* .container {
+margin: 0;
+padding: 0;
+display: flex;
+background: #ffd62a;
+width: 400px;
+height: 150px;
+list-style: none;
+justify-content: space-between;
+justify-content: flex-end;
+align-items: flex-end;
+}
+
+.item {
+margin-left: 5px;
+background: #b02afe;
+width: 50px;
+height: 50px;
+} */

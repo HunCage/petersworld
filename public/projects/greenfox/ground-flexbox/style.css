@@ -1,0 +1,45 @@
+.back {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+i {
+    color: black;
+    font-size: 24px;
+}
+
+i:hover {
+    color: green;
+    transform: scale(1.1);
+}
+
+a {
+    padding: 3px;
+}
+
+.container {
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    justify-content: flex-end;
+    /*             flex-direction: row-reverse; */
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+}
+
+.green {
+    background-color: #51d400;
+}
+
+.yellow {
+    background: #ffd62a;
+}
+
+.purple {
+    background: #b02afe;
+}

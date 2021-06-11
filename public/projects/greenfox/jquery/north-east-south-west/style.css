@@ -1,0 +1,51 @@
+.back {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+i {
+    color: black;
+    font-size: 24px;
+}
+
+i:hover {
+    color: green;
+    transform: scale(1.1);
+}
+
+a {
+    padding: 3px;
+}
+
+main {
+    margin: 100px auto;
+    width: 192px;
+    height: 304px;
+    text-align: center;
+    border: 8px solid #4285f4;
+}
+
+p {
+    color: #fff;
+    font-family: 'Baloo Thambi 2', cursive;
+    font-size: 24px;
+    padding: 20px 36px;
+    margin: -1px;
+}
+
+.red {
+    background: #E67676;
+}
+
+.yellow {
+    background: #F2F062;
+}
+
+.lightblue {
+    background: #A9E6E6;
+}
+
+.blue {
+    background: #7692E4;
+}

@@ -1,0 +1,91 @@
+.main-block {
+    width: 100vw;
+    height: 105vh;
+    background: #f7f7f7;
+}
+
+.main-block .center-me {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+}
+
+.main-block .center-me .block-inner {
+    width: 100%;
+    height: 400px;
+    background: tan;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.main-block .center-me .block-inner .slides {
+    width: 100%;
+    height: 100%;
+}
+
+.main-block .center-me .nav-section {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-block .center-me .nav-section .nav-block {
+    flex-basis: 24%;
+    height: 100%;
+    display: inline-block;
+    overflow: hidden;
+    transition: 0.3s all;
+    opacity: 0.7;
+}
+
+.main-block .center-me .nav-section .nav-block .off {
+    opacity: 1;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* 1st image */
+
+.slide-1 {
+    background-image: url(./img/ichfahre.jpg);
+    background-size: 120% 120%;
+    background-position: center center;
+}
+
+
+/* 2nd Image */
+
+.slide-2 {
+    background-image: url(./img/img.jpg);
+    background-size: 120% 120%;
+    background-position: center center;
+}
+
+
+/* 3rd image */
+
+.slide-3 {
+    background-image: url(./img/img1.jpg);
+    background-size: 120% 120%;
+    background-position: center center;
+}
+
+
+/* 4th image */
+
+.slide-4 {
+    background-image: url(./img/img4.jpg);
+    background-size: 120% 120%;
+    background-position: center center;
+}
+
+.main-block .center-me .nav-section .nav-block:hover {
+    border: 3px solid tomato;
+    opacity: 1;
+}

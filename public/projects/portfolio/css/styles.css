@@ -1,0 +1,53 @@
+body {
+    background-color: cornflowerblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.box {
+    margin-top: 15%;
+    text-align: center;
+    position: relative;
+    outline: 100px;
+}
+
+input {
+    border-radius: 3px;
+    padding: 5px 12px;
+    font-size: 1rem;
+    margin: 4px 2px;
+}
+
+
+/* .usericon {
+    position: relative;
+    top: 23%;
+    left: 10px;
+    background-color: snow;
+    border: 2px solid rgb(192, 182, 182);
+    /* outline: crimson; */
+
+
+/* border-radius: 5%;
+    padding: 1rem;
+    box-shadow: 4px 8px 4px rgb(192, 182, 182);
+}  */
+
+.button:hover {
+    background-color: #1d9c2e;
+    color: black;
+}
+
+.button {
+    border-radius: 3px;
+    z-index: 9999;
+    background-color: #0cbe24;
+    border: 2px solid rgb(66, 64, 64);
+    color: white;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 4px 2px;
+    cursor: pointer;
+}

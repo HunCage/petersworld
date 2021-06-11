@@ -1,0 +1,27 @@
+[{
+        "name": "USA Dollar",
+        "symbol": "$",
+        "label": "USD"
+    },
+    {
+        "name": "Ungarische Forint",
+        "symbol": "Ft",
+        "label": "HUF"
+    },
+    {
+        "name": "Euro",
+        "symbol": "€",
+        "label": "EUR"
+    },
+    {
+        "name": "Schweizer Frank",
+        "symbol": "Chf",
+        "label": "CHF"
+    },
+    {
+        "name": "Russische Rubel",
+        "symbol": "₽",
+        "label": "RUB"
+    }
+
+]

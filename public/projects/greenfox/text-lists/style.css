@@ -1,0 +1,53 @@
+.back {
+    position: absolute;
+}
+
+i {
+    color: black;
+    font-size: 24px;
+    margin-left: 25px;
+}
+
+i:hover {
+    color: green;
+    transform: scale(1.1);
+}
+
+a {
+    padding: 3px;
+}
+
+main {
+    top: 70px;
+    position: relative;
+    margin: 25px 50px;
+}
+
+h1 {
+    color: tomato;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h2 {
+    margin-top: 10px;
+    color: darkviolet;
+}
+
+p {
+    width: 500px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: upper-roman;
+    color: magenta;
+}
+
+ol li:last-child {
+    color: #000;
+    text-decoration: underline;
+}

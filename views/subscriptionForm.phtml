@@ -1,0 +1,60 @@
+<div class="container subFormContainer mb-5">
+    <div class="card p-3 mt-5 mb-5">
+        <div class="jumbotron text-center">
+            <h2>Sie müssen angemeldet sein, um diesen Inhalt anzeigen zu können</h2>
+        </div>
+
+        <?php if (!isLoggedIn()) : ?>
+            <!-- <#?php if ($params['isRegistration']) : ?> -->
+            <!-- <#?php if ($params['info'] === "invalidCredentials") : ?> -->
+            <!-- <div class="alert alert-danger">
+                Passwort oder email ist nicht korrekt
+            </div> -->
+            <!-- <#?php endif; ?> -->
+
+            <!-- <#?php if ($params['info'] === "registrationSuccessful") : ?> -->
+            <!-- <div class="alert alert-success">
+                Registration wurde erfolgreich abgeschlossen
+            </div> -->
+            <!-- <#?php endif; ?> -->
+
+            <form action="/login" method="POST" class="form-group">
+                <label for="username" class="w-100">username
+                    <input type="text" name="username" id="username" class="form-control">
+                </label>
+                <!-- <label for="email" class="w-100">email
+                <input type="text" name="email" id="email" class="form-control">
+            </label> -->
+                <label for="password" class="w-100">password
+                    <input type="password" name="password" id="password" class="form-control">
+                </label>
+                <button type="submit" class="btn btn-primary form-control">Login</button>
+            </form>
+            Haben Sie noch kein Account?
+            <a href="/register">registrieren</a>
+            <!-- <a href="<#?php header('location: subscriptionForm.phtml') ?>">registrieren</a> -->
+
+
+            <!-- <#?php else : ?> -->
+        <?php else : ?>
+
+            <form action="/register" method="POST" class="form-group">
+                <label for="username" class="w-100">username
+                    <input type="text" name="username" id="username" class="form-control">
+                </label>
+                <label for="email" class="w-100">email
+                    <input type="text" name="email" id="email" class="form-control">
+                </label>
+                <label for="password" class="w-100">password
+                    <input type="password" name="password" id="password" class="form-control">
+                </label>
+                <button type="submit" class="btn btn-success form-control">Registration</button>
+            </form>
+            Haben Sie schon ein Account?
+            <a href="localhost/login">einloggen</a>
+
+
+            <!-- <#?php endif ?> -->
+        <?php endif ?>
+    </div>
+</div>

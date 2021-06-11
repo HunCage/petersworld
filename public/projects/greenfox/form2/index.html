@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Complicated form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header class="back">
+        <a href="/"><i class="fas fa-arrow-alt-circle-left"> back</i></a>
+    </header>
+
+    <main>
+        <form>
+
+            <fieldset>
+                <legend>Interesting application form &#128580;</legend>
+
+                <fieldset>
+                    <legend for="name"><label for="name">What is your name?</label></legend>
+
+                    <input type="text" id="name" />
+                </fieldset>
+
+                <fieldset class="colors">
+                    <legend>What is your favorite color?</legend>
+
+                    <div>
+                        <input type="checkbox" id="red" name="red" />
+                        <label for="red">Red</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="green" name="green" />
+                        <label for="green">Green</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="blue" name="blue" />
+                        <label for="blue">Blue</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" class="other" id="other" name="other" />
+                        <label for="other" id="otherx">Other</label>
+                        <input type="text" class="other" id="other1" name="other" autofocus>
+                    </div>
+                </fieldset>
+
+                <fieldset class="decision">
+                    <legend>Would you like to become a developer?</legend>
+
+                    <div>
+                        <input type="radio" id="yes" name="dec" />
+                        <label for="yes">Yes</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="ano" name="dec" />
+                        <label for="ano">Ano</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="igen" name="dec" />
+                        <label for="igen">Igen</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="da" name="dec" />
+                        <label for="da">是</label>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend><label for="text">Why would you like to become a developer?</label></legend>
+                    <textarea cols="40" rows="10" id="text"></textarea>
+                </fieldset>
+
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </main>
+    <script>
+        const box = document.querySelector('#other');
+        const inp = document.querySelector('#other1');
+
+        box.addEventListener('change', (e) => {
+            if (e.currentTarget.checked) {
+                inp.style.visibility = 'visible';
+                inp.focus();
+            } else {
+                inp.style.visibility = 'hidden';
+            }
+        });
+    </script>
+</body>
+
+</html>

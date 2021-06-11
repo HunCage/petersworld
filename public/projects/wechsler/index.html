@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Devise Wechsler</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row my-4">
+        <div class="col-sm-2"></div>
+        <h2 class="h2">Devisen Umrechner</h2>
+    </div>
+
+    <form>
+        <div class="form-group row">
+            <div class="col-sm-2"></div>
+            <label for="összeg" class="col-sm-2"><strong>Betrag: </strong></label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="osszeg">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2"></div>
+            <label for="valuta" class="col-sm-2"><strong>Devise: </strong></label>
+            <div class="col-sm-4">
+                <select class="custom-select mr-sm-2" id="valuta">
+                        <option selected>Wahlen Sie einen Devisen...</option>
+                        <option value="chf">Schweizer Frank</option>
+                        <option value="euro">Euro</option>
+                        <option value="dollar">US Dollar</option>
+                    </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2"></div>
+            <label class="col-sm-2 col-form-label">&nbsp;</label>
+            <div class="col-sm-4">
+                <input type="button" value="Wechseln" class="btn btn-primary btn-block" id="wechseln" onclick="wechsler()">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2"></div>
+            <label for="ertek" class="col-sm-2"><strong>Wert: </strong></label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="ertek" readonly>
+            </div>
+        </div>
+
+    </form>
+
+
+
+
+
+
+</body>
+<script async defer>
+    var eur = 320;
+    var doll = 290;
+    var chf = 300;
+
+    function wechsler() {
+        var v = document.querySelector("#valuta").value;
+        var osszeg = document.querySelector("#osszeg").value;
+        var ert = 0;
+
+        switch (v) {
+            case "chf":
+                ert = osszeg * chf;
+                break;
+            case "euro":
+                ert = osszeg * eur;
+                break;
+            case "dollar":
+                ert = osszeg * doll;
+                break;
+            default:
+                ert = "Keine sollche Angabe!"
+        }
+        document.querySelector("#ertek").value = ert;
+    }
+</script>
+
+</html>

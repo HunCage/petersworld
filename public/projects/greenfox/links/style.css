@@ -1,0 +1,54 @@
+.back {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+i {
+    color: black;
+    font-size: 24px;
+}
+
+i:hover {
+    color: green;
+    transform: scale(1.1);
+}
+
+a {
+    padding: 3px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    margin: 100px auto;
+    width: 35vw;
+}
+
+a {
+    padding: 0;
+    display: block;
+    font-family: font-family: 'Sen', sans-serif;
+    font-size: 24px;
+    margin: 10px;
+    color: green;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+a:active {
+    color: red;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: lime;
+}

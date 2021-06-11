@@ -1,0 +1,66 @@
+<div class="container formContainer m-auto mb-5">
+    <div class="card formWrapper p-3 mt-5 mb-5">
+        <div class="jumbotron text-center">
+            <h5>Sie müssen angemeldet sein, um diesen Inhalt anzeigen zu können</h5>
+            <h2>Legen Sie ein neue Account an</h2>
+        </div>
+
+        <form action="/register" method="POST" class="form-group" id="regForm">
+            <?php if (isset($_GET['info']) == 'invalidCredentials') : ?>
+                <div class="alert alert-danger">
+                    Passwort oder email bereits existiert!
+                </div>
+            <?php endif; ?>
+
+            <?php if (isset($_GET['info']) == 'isSuccess') : ?>
+                <div class="alert alert-success">
+                    Registration ist erfolgreich abgeschlossen!
+                </div>
+            <?php endif; ?>
+
+            <!-- <form action="/login" method="POST" class="form-group" id="form"> -->
+
+            <!-- <div class='input-item'> -->
+                <div class="form-control">
+
+                    <label for="username" class="w-100">username
+                        <input type="text" name="username" id="username">
+                    </label>
+                    <!-- <i class="fa fa-check-circle" id="check"></i>
+                    <i class="fa fa-times-circle" id="times"></i> -->
+                </div>
+            <!-- </div> -->
+
+            <!-- <div class='input-item'> -->
+                <div class="form-control">
+                    <label for="email" class="w-100">email
+                        <input type="text" name="email" id="email">
+                        </label>
+                    <!-- <i class="fa fa-check-circle" id="check"></i>
+                    <i class="fa fa-times-circle" id="times"></i> -->
+                </div>
+            <!-- </div> -->
+
+
+            <!-- <form action="/login" method="POST" class="form-group" id="form"> -->
+
+            <!-- <div class='input-item'> -->
+                <div class="form-control">
+                    <label for="password" class="w-100">password
+                        <input type="password" name="password" id="password">
+                    </label>
+                    <!-- <i class="fa fa-check-circle" id="check"></i>
+                    <i class="fa fa-times-circle" id="times"></i> -->
+                </div>
+            <!-- </div> -->
+
+            <button type="submit" id="submit" class="btn btn-primary form-control">Registration</button>
+        </form>
+
+        <p>
+            Haben Sie schon ein Account?
+            <a href="/login">einloggen</a>
+        </p>
+    </div>
+</div>
+<script src="../public/js/validation.js"></script>

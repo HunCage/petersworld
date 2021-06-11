@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>jQuery - Counter</title>
+</head>
+
+<body>
+    <header class="back">
+        <a href="/"><i class="fas fa-arrow-alt-circle-left"> back</i></a>
+    </header>
+
+    <main>
+        <h1>Counter</h1>
+        <p>0</p>
+        <section>
+            <button class="inc">increment</button>
+            <button class="dec">decrement</button>
+        </section>
+    </main>
+
+    <style>
+        .back {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+        }
+        
+        i {
+            color: black;
+            font-size: 24px;
+        }
+        
+        i:hover {
+            color: green;
+            transform: scale(1.1);
+        }
+        
+        a {
+            padding: 3px;
+        }
+
+        main {
+            position: relative;
+            top: 70px;
+            width: 25%;
+            margin: 5% 10%;
+            padding: 2rem;
+            border: .125rem solid tomato;
+            border-radius: .3125rem;
+            box-shadow: .125rem .125rem .25rem #222;
+        }
+        
+        h1 {
+            font-size: 4rem;
+            margin: 0 0 2rem;
+        }
+        
+        p {
+            margin-left: 2rem;
+            font-weight: 800;
+            font-size: 3.5rem;
+        }
+        
+        section {
+            width: 75%;
+            margin: 0 auto;
+        }
+        
+        button:hover {
+            transform: scale(1.1);
+        }
+        
+        .inc {
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            box-shadow: .125rem .125rem .25rem #222;
+            background: tomato;
+            border-radius: .3rem;
+        }
+        
+        .dec {
+            box-shadow: .125rem .125rem .25rem #222;
+            font-size: 1.5rem;
+            background: lightskyblue;
+            border-radius: .3rem;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script>
+        let count = 0;
+        $('.inc').click(() => {
+            $('p').text(count++);
+        });
+
+        $('.dec').click(() => {
+            $('p').text(count--);
+        });
+    </script>
+</body>
+
+</html>

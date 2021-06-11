@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+    <title>20 boxes</title>
+</head>
+
+<body>
+    <div class="back">
+        <a href="/"><i class="fas fa-arrow-alt-circle-left"> back</i></a>
+    </div>
+
+    <main>
+        <section class="white">
+            <article class="blue"></article>
+            <article class="blue"></article>
+            <article class="blue"></article>
+            <article class="blue"></article>
+            <article class="blue"></article>
+            <article class="blue"></article>
+            <article class="blue"></article>
+            <article class="blue"></article>
+            <article class="blue"></article>
+            <article class="blue"></article>
+        </section>
+
+        <section class="red">
+            <article class="purple"></article>
+            <article class="purple"></article>
+            <article class="purple"></article>
+            <article class="purple"></article>
+            <article class="purple"></article>
+            <article class="purple"></article>
+            <article class="purple"></article>
+            <article class="purple"></article>
+            <article class="purple"></article>
+            <article class="purple"></article>
+        </section>
+    </main>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .back {
+            position: absolute;
+            left: 25px
+        }
+        
+        i {
+            color: black;
+            font-size: 24px;
+        }
+        
+        i:hover {
+            color: green;
+            transform: scale(1.1);
+        }
+        
+        a {
+            padding: 3px;
+        }
+        
+        main {
+            position: relative;
+            top: 70px;
+            margin: 5vw auto;
+            width: 70vw;
+        }
+        
+        .white,
+        .red {
+            display: flex;
+            /* display: block; */
+            /* flex-direction: column; */
+            width: 39rem;
+            height: 5rem;
+            border: .125rem solid rgb(25, 151, 235);
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .red {
+            background: tomato;
+            margin-top: .625rem;
+        }
+        
+        .purple {
+            flex-direction: row;
+            background: purple;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        
+        .blue {
+            flex-direction: row;
+            /* align-items: space-evenly;
+            justify-content: center; */
+            background: rgb(25, 151, 235);
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    </style>
+</body>
+
+</html>

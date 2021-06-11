@@ -1,0 +1,82 @@
+<div class="container formContainer w-50 mt-5 mb-0">
+    <!-- <div class="formContainer w-75 mt-5 mb-0"> -->
+    <!-- <div class="card p-3 mt-5 formWrapper"> -->
+    <div class="card formWrapper p-3 mt-5 bg-white">
+        <div class="jumbotron text-center bg-dark">
+            <h2 class="text-warning">Loggen Sie ein</h2>
+        </div>
+
+        <!-- <#?php if (!$info) : ?> -->
+        <!-- <div class="alert alert-danger">
+                Passwort oder email ist nicht korrekt!
+            </div> -->
+        <!-- <#?php endif; ?> -->
+
+        <form action="/login" method="POST" class="form-group" class="postForm" onkeyup="logValidation()" onsubmit="return logValidation();">
+            <!-- <form action="/login" method="POST" class="form-group" id="form"> -->
+
+
+            <?php if (isset($_GET['info'])) : ?>
+                <?php if ($_GET['info'] === 'invalidCredentials') : ?>
+                    <div class="alert alert-danger">
+                        Passwort oder email ist nicht korrekt!
+                    </div>
+                <?php endif; ?>
+
+                <?php if ($_GET['info'] === 'isSuccess') : ?>
+                    <div class="alert alert-success">
+                        Registration ist erfolgreich abgeschlossen!
+                    </div>
+                <?php endif; ?>
+
+                <?php if ($_GET['info'] === 'isLoggedIn') : ?>
+                    <div class="alert alert-primary">
+                        Erfolgreich eingeloggt!
+                    </div>
+                <?php endif; ?>
+            <?php endif; ?>
+
+            <!-- <div class='input-item'> -->
+            <!-- <div class="form-control m-3"> -->
+            <div class="inputBox">
+                <label for="username" class="w-100 mb-0">username</label>
+                <input class="form-control" type="text" name="username" id="username" placeholder="Benutzername">
+                <span class="indicatorUser"></span>
+                <!-- <span class="errorText mt-0"></span> -->
+                <!-- <i class="fa fa-check-circle" id="check"></i>
+                    <i class="fa fa-times-circle" id="times"></i> -->
+                <!-- </div> -->
+            </div>
+
+            <!-- <i class="fa fa-check-circle" id="check"></i>
+                    <i class="fa fa-times-circle" id="times"></i> -->
+            <!-- </div> -->
+            <!-- </div> -->
+
+            <!-- <div class='input-item'> -->
+            <!-- <div class="form-control"> -->
+            <div class="inputBox">
+                <label for="password" class="w-100">password</label>
+                <input class="form-control" type="password" name="password" id="password" placeholder="Passwort">
+                <span class="indicatorPassword"></span>
+
+                <!-- <span class="errorText"></span> -->
+                <!-- <i class="fa fa-check-circle" id="check"></i>
+                    <i class="fa fa-times-circle" id="times"></i> -->
+            </div>
+
+            <!-- <i class="fa fa-check-circle" id="check"></i>
+                    <i class="fa fa-times-circle" id="times"></i> -->
+            <!-- </div> -->
+            <!-- </div> -->
+
+            <button type="submit" class="btn btn-success form-control">einloggen</button>
+        </form>
+
+        <p>
+            Haben Sie noch kein Account?
+            <a href="/register">registrieren</a>
+        </p>
+    </div>
+</div>
+<script src="../public/js/validation.js"></script>

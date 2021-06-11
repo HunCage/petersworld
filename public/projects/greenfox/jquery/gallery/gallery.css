@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.back {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+i {
+    color: black;
+    font-size: 24px;
+}
+
+i:hover {
+    color: green;
+    transform: scale(1.1);
+}
+
+a {
+    padding: 3px;
+}
+/* 
+body {
+    z-index: -999;
+    background-image: linear-gradient(to right, rgba(101, 146, 197,.6), rgba(0, 255, 0,.3));
+}
+ */
+.wrapper {
+    top: 70px;
+}
+
+.container,
+.wrapper {
+    background-color: aliceblue;
+    position: inherit;
+    text-align: center;
+    height: 100%;
+    box-shadow: .1875rem .1875rem .7rem #222;
+    position: relative;
+    margin: 1.5rem auto;
+    width: 64rem;
+    height: 34.1375rem;
+}
+
+.arrow {
+    position: absolute;
+    cursor: pointer;
+}
+
+#arrow-left {
+    top: 44%;
+    left: 4%;
+}
+
+.image {
+    width: 50rem;
+    height: 34.1375rem;
+}
+
+#arrow-right {
+    top: 44%;
+    right: 4%;
+    transform: rotate(.5turn);
+}
+
+#txtContainer {
+    position: absolute;
+    width: 90%;
+}
+
+h1 {
+    z-index: 1;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 3.7rem;
+    left: 8.3rem;
+    color: white;
+}
+
+#photo-description {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center; */
+    /* text-indent: 2rem; */
+    /* z-index: 99; */
+    position: relative;
+    /* left: 2.65rem; */
+    bottom: 6.025rem;
+    /* left: 4.5rem; */
+    opacity: .6;
+    background-color: black;
+    color: white;
+    font-style: italic;
+    text-align: left;
+    padding: 2.5rem 2rem 1rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.image {
+    width: 80%;
+}
+
+.thumbnails {
+    margin-bottom: 2rem;
+    z-index: 10;
+}
+
+.thumber {
+    display: inline-block;
+}
+
+.thmbs:hover {
+    opacity: .8;
+    transform: scaleY(1.1);
+}
+
+.thmbs:active {
+    opacity: .8;
+    transform: scaleY(1.1);
+}
+
+.thmbs {
+    background-color: aliceblue;
+    /* z-index: 15; */
+    cursor: pointer;
+    opacity: .5;
+    width: 6rem;
+    height: 4rem;
+    /* outline: 1rem; */
+    padding: .35rem;
+    box-shadow: .1875rem .1875rem .7rem #222;
+    margin: 0 1rem 2rem;
+}

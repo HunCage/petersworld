@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8</title>
+    <script type="text/javascript">
+        alert('Make me a question');
+        prompt('What is your name;')
+        let userName = prompt.value;
+        userName ? `Hello, ${userName}!` : 'Hello!';
+
+        let userQuestion = prompt('Can you answer my question?');
+        `The user asked ${userQuestion}?`;
+        let randomNumber = Math.floor(Math.random() * 19);
+        eightBall.innerText = '';
+        answer.innerText;
+
+
+        window.onload = function() {
+            var eight = document.getElementById("eight");
+            var answer = document.getElementById("answer");
+            var eightball = document.getElementById("eight-ball");
+            var question = document.getElementById("question");
+        }
+
+        switch (randomNumber) {
+            case 0:
+                eightBall = 'It is certain';
+                break;
+            case 1:
+                eightBall = 'It is decidely so';
+                break;
+            case 2:
+                eightBall = 'Reply hazy try again';
+                break;
+            case 3:
+                eightBall = 'Cannot predict now';
+                break;
+            case 4:
+                eightBall = 'Do not count on it';
+                break;
+            case 5:
+                eightBall = 'My sources say no';
+                break;
+            case 6:
+                eightBall = 'Outlook not so good';
+                break;
+            case 7:
+                eightBall = 'Yes, Signs point to yes';
+                break;
+            case 8:
+                eightBall = 'Without a doubt';
+                break;
+            case 9:
+                eightBall = 'Yes - definitely';
+                break;
+            case 10:
+                eightBall = 'You may rely on it';
+                break;
+            case 11:
+                eightBall = 'As I see it, yes';
+                break;
+            case 12:
+                eightBall = 'Most likely';
+                break;
+            case 13:
+                eightBall = 'Outlook good';
+                break;
+            case 14:
+                eightBall = 'My reply is no';
+                break;
+            case 15:
+                eightBall = 'Very doubtful';
+                break;
+            case 16:
+                eightBall = 'Ask again later';
+                break;
+            case 17:
+                eightBall = 'Better not tell you now';
+                break;
+            case 18:
+                eightBall = 'Concentrate and ask again';
+                break;
+            default:
+        }
+        // var x = document.getElementById('question');
+        // x.welc.innerHTML = welc;
+        // document.getElementById("ans").innerHTML = eightBall;
+    </script>
+
+
+
+</head>
+
+<body>
+    <div id="content">
+        <h1>Magic 8 ball</h1>
+        <p id="info">Ask me what you want to know and click on the Magic 8 Ball</p>
+        <div id="eight-ball" class="eight-ball">
+            <div class="answer">
+                <p id="eight">8</p>
+                <p id="answer"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div>
+        <h1 id="question">Hi! all of your question will be answered!</h1>
+        <!-- <p id="ans"></p> -->
+    <!-- </div> -->
+</body>
+
+</html>

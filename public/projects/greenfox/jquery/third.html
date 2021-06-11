@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>jQuery - 3rd exercise</title>
+</head>
+
+<body>
+    <header class="back">
+        <a href="/"><i class="fas fa-arrow-alt-circle-left"> back</i></a>
+    </header>
+
+    <main>
+        <section class="btns">
+            <button class="btn1">console.log();</button>
+            <button class="btn2">Change button text</button>
+            <button class="btn3">Change button color</button>
+        </section>
+
+
+        <section class="inp">
+            <input type="text" class="inpTxt" value="blue">
+            <button class="btn4">One times</button>
+            <button class="btn5">Several times</button>
+        </section>
+
+    </main>
+    <style>
+        .back {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+        }
+        
+        i {
+            color: black;
+            font-size: 24px;
+        }
+        
+        i:hover {
+            color: green;
+            transform: scale(1.1);
+        }
+        
+        a {
+            padding: 3px;
+        }
+        
+        main {
+            position: relative;
+            top: 70px;
+            width: 80%;
+            margin: 2rem auto;
+        }
+        
+        .inp {
+            margin-top: 2rem;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script>
+        $('.btn1').click(() => {
+            console.log('Yes, you just clicked on me');
+        });
+
+        $('.btn2').click(() => {
+            $('.btn1').text('Try again');
+        });
+
+        $('.btn3').click(() => {
+            $('.btn1').css('background', 'tomato');
+            $('.btn2').css('background', 'tomato');
+            $('.btn3').css('background', 'tomato');
+        });
+
+        $('.btn4').one('click', () => {
+            let value = $('.inpTxt').val();
+            $('.btn4').change().css('background', value);
+        });
+
+        $('.btn5').click(() => {
+            let value = $('.inpTxt').val();
+            $('.btn5').change().css('background', value);
+        });
+    </script>
+</body>
+
+</html>

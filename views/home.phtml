@@ -1,0 +1,30 @@
+<div class="container mt-5 w-50">
+    <div class="card p-3 mt-5 bg-white">
+
+            <?php if (isset($_GET['info']) == 'isLoggedIn') : ?>
+                <div class="alert alert-success">
+                    Erfolgreich eingeloggt!
+                </div>
+            <?php endif; ?>
+
+        <div class="jumbotron text-center">
+
+
+            <?php if (date("H") <= 10) : ?>
+                <h3>Guten Morgen,</h3>
+            <?php elseif (date("H") <= 18) : ?>
+                <h3>Guten Tag,</h3>
+            <?php else : ?>
+                <h3>Guten Abend,</h3>
+            <?php endif; ?>
+
+            <?php if (!isset($_SESSION['username'])) : ?>
+                <!-- <#?php if (isset($_GET['info']) == 'isLoggedIn') : ?> -->
+                <h3 style="border-top: 3px solid; margin-top: 1rem; padding: 1rem;">Sie müssen angemeldet sein, um diesen Inhalt anzeigen zu können</h3>
+            <?php else : ?>
+                <h2> <?= $_SESSION["username"] ? $_SESSION["username"] . '!' : '' ?></h2>
+            <?php endif; ?>
+
+        </div>
+    </div>
+</div>

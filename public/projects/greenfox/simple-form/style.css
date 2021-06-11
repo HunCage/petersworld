@@ -1,0 +1,63 @@
+.back {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+i {
+    color: black;
+    font-size: 24px;
+}
+
+i:hover {
+    color: green;
+    transform: scale(1.1);
+}
+
+a {
+    padding: 3px;
+}
+
+main {
+    position: relative;
+    top: 70px;
+}
+
+form {
+    display: block;
+    width: 300px;
+    margin: 100px auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+label {
+    font-size: 24px;
+    margin: 16px 0 10px;
+    padding-bottom: 16px;
+    text-transform: uppercase;
+    padding-left: 0;
+    font-weight: 500;
+}
+
+input {
+    margin: 6px 0 20px;
+    width: 290px;
+    height: 50px;
+    padding: 6px;
+    display: block;
+    border-radius: 8px;
+    border: 3px solid lime;
+}
+
+.btn {
+    font-size: 20px;
+    font-weight: 500;
+    width: 120px;
+    height: 80px;
+    background: lime;
+    color: #000;
+    border: none;
+    padding: 16px;
+    margin-top: 8px;
+    border-radius: 40px;
+}

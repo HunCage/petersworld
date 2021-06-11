@@ -1,0 +1,45 @@
+.back {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: block;
+}
+
+i {
+    color: black;
+    font-size: 24px;
+}
+
+i:hover {
+    color: green;
+    transform: scale(1.1);
+}
+
+a {
+    padding: 3px;
+}
+
+main {
+    position: relative;
+    margin: 75px auto;
+    font-family: 'Sen', sans-serif;
+    text-align: center;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    width: 200px;
+    font-size: 24px;
+}
+
+img {
+    width: 150px;
+}
+
+a {
+    display: block;
+}

@@ -1,0 +1,33 @@
+.back {
+    position: absolute;
+}
+
+i {
+    color: black;
+    font-size: 24px;
+}
+
+i:hover {
+    color: green;
+    transform: scale(1.1);
+}
+
+a {
+    padding: 3px;
+}
+
+main {
+    position: relative;
+    top: 70px;
+}
+
+p {
+    background: #0D91A1;
+    color: #015668;
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    border: 5px solid #7DCE94;
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+}
