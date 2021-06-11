@@ -1,12 +1,12 @@
-<div class="container formContainer mt-5 mb-5  w-50">
-    <div class="card formWrapper p-3 mt-5 mb-5 bg-white">
+<div class="regContainer mt-5">
+    <div class="card p-3 mt-5 bg-white">
         <div class="jumbotron text-center bg-dark">
             <h5 class="text-warning">Sie müssen angemeldet sein, um diesen Inhalt anzeigen zu können</h5>
             <h2 class="text-warning">Legen Sie ein neue Account an</h2>
         </div>
 
         <form action="/register" method="POST" class="form-group" class="postForm" onkeyup="regValidation()" onsubmit="return regValidation();">
-        <?php if (isset($_GET['info'])) : ?>
+            <?php if (isset($_GET['info'])) : ?>
                 <?php if ($_GET['info'] === 'invalidRegister') : ?>
                     <div class="alert alert-danger">
                         Benutzername oder email ist schon existiert!<br />
@@ -54,15 +54,14 @@
                 <!-- <i class="fa fa-check-circle" id="check"></i>
                     <i class="fa fa-times-circle" id="times"></i> -->
             </div>
-    <!-- </div> -->
 
-    <button type="submit" id="submit" class="btn btn-primary form-control mt-3">Registration</button>
-    </form>
+            <button type="submit" id="submit" class="btn btn-primary form-control mt-3">Registration</button>
+        </form>
 
-    <p>
-        Haben Sie schon ein Account?
-        <a href="/login">einloggen</a>
-    </p>
-</div>
+        <p>
+            Haben Sie schon ein Account?
+            <a href="/login" class="text-success">Loggen Sie ein!</a>
+        </p>
+    </div>
 </div>
 <script src="public/js/validation.js"></script>

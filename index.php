@@ -20,7 +20,7 @@ $routes = [
         '/projekte' => 'projectHandler',
         '/bootcamp' => 'bootcampHandler',
         '/unterlagen' => 'documentHandler',
-        '/kontakt' => 'contactHandler',
+        '/kontakt' => 'documentHandler',
         '/kids-zone' => 'kidsHandler',
         '/schwesterEdit' => 'schwesterEditHandler'
     ],
@@ -257,14 +257,15 @@ function homeHandler()
             'content' => render('home.phtml', [
                 // 'isRegistration' => isset($_GET['isRegistration']),
                 // 'info' => $_GET['info'] ?? '',
-                'isAuthorized' => false,
-                'isAuthorized' => isLoggedIn(),
+                // 'isAuthorized' => false,
+                // 'isAuthorized' => isLoggedIn(),
                 // 'username' => $_POST['username']
             ]),
             'isAuthorized' => false,
             'isAuthorized' => isLoggedIn(),
 
         ]);
+    return;
     }
 
     echo render('wrapper.phtml', [

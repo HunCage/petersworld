@@ -1,4 +1,4 @@
-<div class="container mt-5 w-50">
+<div class="homeContainer w-100 mt-5">
     <div class="card p-3 mt-5 bg-white">
 
             <?php if (isset($_GET['info']) == 'isLoggedIn') : ?>
@@ -7,8 +7,7 @@
                 </div>
             <?php endif; ?>
 
-        <div class="jumbotron text-center">
-
+        <div class="jumbotron text-center bg-dark text-warning">
 
             <?php if (date("H") <= 10) : ?>
                 <h3>Guten Morgen,</h3>
