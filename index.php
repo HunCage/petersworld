@@ -1,8 +1,11 @@
 <?php
 
+// require 'projects.php';
+
 session_start();
 error_reporting(-1);
 ini_set('display_errors', 'on');
+
 
 # Router
 $method = $_SERVER['REQUEST_METHOD'];
@@ -78,7 +81,7 @@ function loginHandler()
     $username = esc($_POST["username"]);
     $username = $_POST["username"];
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
-    
+
     $pdo = getConnection();
     $statement = $pdo->prepare("SELECT * FROM users WHERE username = ?");
     $statement->execute([
@@ -106,12 +109,12 @@ function loginHandler()
         return;
     }
     if ($user['isActive'] !== 0 && $isVerified) {
-    session_start();
-    $_SESSION['username'] = $user['username'];
-    $_SESSION['userId'] = $user['id'];
-    $_SESSION['isAuthorized'] = isLoggedIn();
+        session_start();
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['userId'] = $user['id'];
+        $_SESSION['isAuthorized'] = isLoggedIn();
 
-    header('Location: /?info=isLoggedIn');
+        header('Location: /?info=isLoggedIn');
         return;
     }
 }
@@ -211,10 +214,23 @@ function isLoggedIn(): bool
     return true;
 }
 
-
 function peterHandler()
 {
     // redirectToLoginPageIfNotLoggedIn();
+    // $pdo = getConnection();
+
+    // $statement = $pdo->prepare("SELECT * FROM `projects`");
+    // $statement->execute([]);
+    // $projects = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    // var_dump($projects);
+    // die;
+    // exit;
+    // return $projects;
+    // $projects = getAllProjects();
+    // var_dump($projects);
+    // exit;
+
     if (!isLoggedIn()) {
         echo render("wrapper.phtml", [
             'content' => render('subscriptionForm.phtml', [
@@ -225,6 +241,7 @@ function peterHandler()
         ]);
         return;
     }
+
 
     echo render('wrapper.phtml', [
         'content' => render('peter.phtml', []),
@@ -256,7 +273,6 @@ function homeHandler()
             'content' => render('home.phtml', []),
             'isAuthorized' => false,
             'isAuthorized' => isLoggedIn(),
-
         ]);
         return;
     }
@@ -306,8 +322,25 @@ function documentHandler()
 
 function projectHandler()
 {
+    $pdo = getConnection();
+
+    $statement = $pdo->prepare("SELECT * FROM `projects`");
+    $statement->execute([]);
+    $projects = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    // var_dump($projects);
+    // die;
+    // exit;
+    // return $projects;
+    // $projects = getAllProjects();
+    // var_dump($projects);
+    // exit;
+
+
     echo render('wrapper.phtml', [
-        'content' => render('project.phtml', []),
+        'content' => render('project.phtml', [
+            'projects' => $projects,
+        ]),
         'isAuthorized' => isLoggedIn()
     ]);
 }
