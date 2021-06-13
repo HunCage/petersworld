@@ -48,6 +48,17 @@ body {
     /* width: 60vw; */
 }
 
+.homeContainer h2 {
+    /* width: 60%; */
+    font-size: 5rem;
+    text-shadow: .175rem .175rem rgb(189, 1, 1);
+}
+
+.homeContainer h3 {
+    /* width: 60%; */
+    font-size: 3rem;
+}
+
 
 /* Form Validation */
 
@@ -309,8 +320,8 @@ progress {
 .container {
     margin: 2em auto;
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     cursor: grab;
 }
@@ -584,7 +595,7 @@ iframe {
 
 .docsWrapper {
     /* display: flex; */
-    height: 92.325vh;
+    /* height: 92.325vh; */
     margin: 0;
     /* position: relative; */
     width: 100vw;
@@ -682,7 +693,7 @@ iframe {
 .containerx {
     /* margin-top: 3rem; */
     position: relative;
-    /* bottom: 0; */
+    bottom: 1rem;
     /* display: flex; */
     flex-direction: column;
     justify-content: center;
@@ -1122,9 +1133,11 @@ progress::-moz-progress-bar {
 
 div .container .footer {
     position: absolute;
+    justify-content: center;
+    align-items: center;
     left: 0;
     bottom: 0;
-    height: 70px !important;
+    /* height: 70px !important; */
 }
 
 .footerSocialButtons {
@@ -1152,15 +1165,76 @@ a.footerLink {
     min-height: 100%;
 }
 
-@media only screen and (max-width: 768px) {
-    html {
-        background: url('../img/data5.jpg');
+
+/* Media querries */
+
+
+/* Soclinks Buttons */
+
+@media only screen and (max-width: 1200px) {
+    .grid {
+        display: flex;
         flex-direction: column;
-        background-size: cover;
-        background-repeat: repeat;
+        grid-gap: 3rem;
+    }
+    .wrapper .unt .grid .item .dox {
+        font-size: 2rem;
+    }
+    .cont {
+        position: relative;
+        font-size: 1rem;
+        margin: 2rem auto;
+        word-wrap: break-word;
+        /* width: 93%; */
+    }
+    .loginContainer {
+        position: relative;
+        width: 100vw;
+        height: 100%;
+    }
+    .loginCard {
+        height: 60vh;
+        width: 80vw;
+        margin-bottom: 2rem;
+    }
+    /* footer {
+        margin-top: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 70%;
+        width: 100vw;
+    }
+    .footerParagraph {
+        margin: .5rem auto;
+    }
+    .footerSocialButtons {
+        margin: 0.5rem auto;
+    }
+    .fooFooter {
+        z-index: 99999;
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    } */
+}
+
+@media only screen and (max-width: 468px) {
+    html {
+        /* background: url('../img/data5.jpg'); */
+        flex-direction: column;
+        /* background-size: cover; */
+        /* background-repeat: repeat; */
     }
     body {
-        height: 100vh;
+        height: 100%;
     }
     .navbar {
         left: 0;
@@ -1202,7 +1276,7 @@ a.footerLink {
         justify-content: center;
         flex-direction: column;
     }
-    .container {
+    /* .projects {
         pointer-events: none;
         position: absolute;
         width: 60%;
@@ -1210,15 +1284,27 @@ a.footerLink {
         margin-top: 10rem;
         overflow: visible;
         height: 100%;
+    } */
+    .wrapper {
+        width: 100vw;
+        flex-direction: column;
+        /* pointer-events: none;
+        position: absolute;
+        width: 80%;
+        margin: 5vh;
+        margin-top: 5rem;*/
+        overflow: visible;
+        height: 100%;
     }
     .cards {
-        position: absolute;
+        /* position: absolute; */
         display: flex;
         padding: 2rem;
         flex-direction: column;
         grid-gap: 4rem;
     }
     .card {
+        flex-direction: column;
         border: 0.3rem solid rgb(0, 174, 255);
         border-radius: 1rem;
         overflow: hidden;
@@ -1226,35 +1312,64 @@ a.footerLink {
         background: transparent;
         backdrop-filter: blur(0.6rem);
     }
+    .containerx {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    .fabX,
+    .spinX {
+        font-size: 2rem;
+    }
+    .btnSoc {
+        width: 3.5rem;
+        margin: .75rem;
+    }
+    .containerx small {
+        font-size: .4rem;
+    }
+    .loginContainer {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+    }
+    .loginCard {
+        height: 100%;
+        width: 90vw;
+        margin-bottom: 2rem;
+    }
+    .loginJumbo {
+        /* max-height: 33%; */
+        padding: 1rem;
+        margin: 1rem;
+    }
+    h2.text-warning {
+        font-size: 1rem;
+    }
     footer {
         margin-top: 2rem;
         flex-wrap: wrap;
         justify-content: center;
+        text-align: center;
+        /* align-items: center; */
         /* display: flex; */
-        /* flex-direction: column; */
-        position: absolute;
+        flex-direction: column;
+        position: relative;
         left: 0;
         bottom: 0;
+        height: 70%;
+        width: 100vw;
     }
-}
-
-
-/* Soclinks Buttons */
-
-@media only screen and (max-width: 1200px) {
-    .grid {
-        display: flex;
-        flex-direction: column;
-        grid-gap: 3rem;
+    .footerParagraph {
+        margin: .5rem auto;
     }
-    .wrapper .unt .grid .item .dox {
-        font-size: 2rem;
+    .footerSocialButtons {
+        margin: 0.5rem auto;
     }
-    .cont {
-        position: relative;
-        font-size: 1rem;
-        margin: 2rem auto;
-        word-wrap: break-word;
-        width: 93%;
+    .fooFooter {
+        z-index: 99999;
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
 }

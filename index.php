@@ -78,17 +78,25 @@ function loginHandler()
     $username = esc($_POST["username"]);
     $username = $_POST["username"];
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
-
+    
     $pdo = getConnection();
     $statement = $pdo->prepare("SELECT * FROM users WHERE username = ?");
     $statement->execute([
-        $username
+        $username,
     ]);
     $user = $statement->fetch(PDO::FETCH_ASSOC);
+    $isActive = $user['isActive'];
+
+
 
     if (!$user) {
         header('Location: /login?info=invalidCredentials');
         return;
+    }
+
+    if ($isActive == 0) {
+        header('Location: /login?info=notActivated');
+        exit;
     }
 
     $isVerified = password_verify($_POST['password'], $user["password"]);
@@ -97,15 +105,16 @@ function loginHandler()
         header('Location: /login?info=invalidCredentials');
         return;
     }
-
+    if ($user['isActive'] !== 0 && $isVerified) {
     session_start();
     $_SESSION['username'] = $user['username'];
     $_SESSION['userId'] = $user['id'];
     $_SESSION['isAuthorized'] = isLoggedIn();
 
     header('Location: /?info=isLoggedIn');
+        return;
+    }
 }
-
 
 function registrationHandler()
 {
@@ -115,7 +124,7 @@ function registrationHandler()
     $email = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
     $password = $_POST["password"];
 
-    
+
     if (empty($password)) {
         // $_SESSION['info'] = 'username or email already exists';
         header('Location: /register?info=invalidRegister');
@@ -139,21 +148,17 @@ function registrationHandler()
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         if (!empty($result)) {
-            // $_SESSION['info'] = 'username or email already exists';
             header('Location: /register?info=invalidRegister');
             exit;
         }
     }
-
-    
-
 
     $statement = $pdo->prepare("INSERT INTO `users` (`username`, `email`, `password`, `createdAt`) VALUES (?, ?, ?, ?);");
     $statement->execute([
         $username,
         $email,
         password_hash($_POST['password'], PASSWORD_DEFAULT),
-        time()
+        time(),
     ]);
 
     header('Location: /login?info=isSuccess');
@@ -161,12 +166,10 @@ function registrationHandler()
 
 function loginFormHandler()
 {
-    // $username = $_POST['username'];
     echo render('wrapper.phtml', [
         'content' => render('loginForm.phtml', []),
         'isAuthorized' => isLoggedIn(),
         'isAuthorized' => false,
-        // 'username' => $username
     ]);
     return;
 }
@@ -215,13 +218,9 @@ function peterHandler()
     if (!isLoggedIn()) {
         echo render("wrapper.phtml", [
             'content' => render('subscriptionForm.phtml', [
-                // 'isRegistration' => isset($_GET['isRegistration']),
-                // 'url' => getPathWithId($_SERVER['REQUEST_URI']),
                 'isAuthorized' => isLoggedIn()
-
             ]),
             'isAuthorized' => isLoggedIn(),
-
             'isAuthorized' => false,
         ]);
         return;
@@ -254,29 +253,20 @@ function homeHandler()
     // redirectToLoginPageIfNotLoggedIn();
     if (!isLoggedIn()) {
         echo render('wrapper.phtml', [
-            'content' => render('home.phtml', [
-                // 'isRegistration' => isset($_GET['isRegistration']),
-                // 'info' => $_GET['info'] ?? '',
-                // 'isAuthorized' => false,
-                // 'isAuthorized' => isLoggedIn(),
-                // 'username' => $_POST['username']
-            ]),
+            'content' => render('home.phtml', []),
             'isAuthorized' => false,
             'isAuthorized' => isLoggedIn(),
 
         ]);
-    return;
+        return;
     }
 
     echo render('wrapper.phtml', [
         'content' => render('home.phtml', [
-            // 'isRegistration' => isset($_GET['isRegistration']),
-            // 'info' => $_GET['info'] ?? '',
             'isAuthorized' => isLoggedIn(),
-            // 'username' => $_POST['username']
-            ]),
-            'isAuthorized' => true,
-            'isAuthorized' => isLoggedIn(),
+        ]),
+        'isAuthorized' => true,
+        'isAuthorized' => isLoggedIn(),
     ]);
 
     return;
